@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professor - Terms of Service / Kullanım Şartları</title>
+    <title>Terms of Service - Professor</title>
     <style>
         * {
             margin: 0;
@@ -13,202 +13,176 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+        }
+
+        .header-content {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .brand span {
+            font-size: 24px;
+        }
+
+        .brand strong {
+            font-size: 18px;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid #dee2e6;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover {
+            background: #f8f9fa;
+        }
+
+        .lang-btn.active {
+            background: #333;
+            color: white;
+            border-color: #333;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 24px;
         }
 
         .card {
             background: white;
-            border-radius: 16px;
+            border-radius: 12px;
             padding: 40px;
-            margin-top: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .lang-switcher {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .lang-btn {
-            padding: 10px 20px;
-            margin: 0 5px;
-            border: 2px solid white;
-            background: transparent;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-
-        .lang-btn:hover,
-        .lang-btn.active {
-            background: white;
-            color: #667eea;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
         }
 
         h1 {
-            color: #667eea;
-            margin-bottom: 10px;
             font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
         }
 
-        .subtitle {
+        .updated {
             color: #888;
-            margin-bottom: 30px;
+            font-size: 14px;
+            margin-bottom: 32px;
         }
 
         h2 {
-            color: #764ba2;
-            margin-top: 25px;
-            margin-bottom: 10px;
             font-size: 18px;
+            color: #1a1a1a;
+            margin: 28px 0 12px 0;
         }
 
-        p,
-        ul {
-            margin-bottom: 15px;
+        p {
+            margin-bottom: 16px;
+            color: #555;
         }
 
         ul {
-            padding-left: 20px;
+            margin: 0 0 16px 24px;
+            color: #555;
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
-        .warning {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
+        .warning-box {
+            background: #fff8e6;
+            border-left: 4px solid #f59e0b;
             border-radius: 0 8px 8px 0;
-            margin: 20px 0;
+            padding: 20px;
+            margin: 24px 0;
         }
 
-        .logo {
-            text-align: center;
-            font-size: 48px;
-            margin-bottom: 10px;
+        .warning-box h2 {
+            margin-top: 0;
+            color: #b45309;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: #333;
         }
 
         .hidden {
             display: none;
         }
-
-        .nav-links {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .nav-links a {
-            color: #667eea;
-            text-decoration: none;
-        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="lang-switcher">
-            <button class="lang-btn active" onclick="showLang('tr')">🇹🇷 Türkçe</button>
-            <button class="lang-btn" onclick="showLang('en')">🇬🇧 English</button>
-        </div>
-
-        <div class="card">
-            <div class="logo">🎓</div>
-
-            <!-- TURKISH VERSION -->
-            <div id="content-tr">
-                <h1>Kullanım Şartları</h1>
-                <p class="subtitle">Son güncelleme: 17 Aralık 2024</p>
-
-                <p>Professor uygulamasını ("Uygulama") kullanarak aşağıdaki şartları kabul etmiş olursunuz.</p>
-
-                <h2>1. Hizmet Tanımı</h2>
-                <p>Professor, yapay zeka destekli bir soru çözüm uygulamasıdır. Uygulama, fotoğraf yoluyla gönderilen
-                    matematik, fizik ve kimya sorularını analiz eder ve adım adım çözüm önerileri sunar.</p>
-
-                <h2>2. Kullanım Koşulları</h2>
-                <ul>
-                    <li>Uygulamayı yalnızca yasal amaçlarla kullanabilirsiniz</li>
-                    <li>Başkalarının fikri mülkiyet haklarını ihlal eden içerik gönderemezsiniz</li>
-                    <li>Uygulamayı kötüye kullanamazsınız (spam, zararlı içerik vb.)</li>
-                    <li>Hesabınızın güvenliğinden siz sorumlusunuz</li>
-                </ul>
-
-                <h2>3. Kredi Sistemi</h2>
-                <ul>
-                    <li>Her soru çözümü 1 kredi harcar</li>
-                    <li>Kayıt olan her kullanıcı 2 ücretsiz kredi kazanır</li>
-                    <li>Ek krediler uygulama içinden satın alınabilir</li>
-                    <li>Satın alınan krediler iade edilmez</li>
-                </ul>
-
-                <h2>4. Ödeme ve İadeler</h2>
-                <ul>
-                    <li>Tüm ödemeler Google Play veya Apple App Store üzerinden işlenir</li>
-                    <li>Fiyatlar bulunduğunuz ülkeye göre değişebilir</li>
-                    <li>İade talepleri ilgili mağazanın politikalarına tabidir</li>
-                </ul>
-
-                <div class="warning">
-                    <h2>⚠️ Sorumluluk Reddi</h2>
-                    <ul>
-                        <li>Çözümler yalnızca <strong>eğitim amaçlıdır</strong></li>
-                        <li>Sınav ve resmi değerlendirmelerde doğrudan kullanılmamalıdır</li>
-                        <li>Çözümlerin %100 doğruluğu garanti edilmez</li>
-                        <li>Yapay zeka hata yapabilir, sonuçları doğrulamanız önerilir</li>
-                    </ul>
-                </div>
-
-                <h2>5. Fikri Mülkiyet</h2>
-                <p>Professor uygulaması, logosu ve içerikleri telif hakkı ile korunmaktadır. İzinsiz kopyalama, dağıtma
-                    veya değiştirme yasaktır.</p>
-
-                <h2>6. Hesap Sonlandırma</h2>
-                <ul>
-                    <li>Hesabınızı istediğiniz zaman silebilirsiniz</li>
-                    <li>Kullanım şartlarını ihlal eden hesaplar askıya alınabilir</li>
-                    <li>Hesap silindiğinde kullanılmamış krediler iade edilmez</li>
-                </ul>
-
-                <h2>7. Değişiklikler</h2>
-                <p>Bu kullanım şartları önceden haber verilmeksizin güncellenebilir. Uygulamayı kullanmaya devam ederek
-                    güncel şartları kabul etmiş sayılırsınız.</p>
-
-                <div class="nav-links">
-                    <a href="privacy.html">Gizlilik Politikası</a>
-                </div>
+    <div class="header">
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <span>🎓</span>
+                <strong>Professor</strong>
+            </a>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="showLang('en')">EN</button>
+                <button class="lang-btn" onclick="showLang('tr')">TR</button>
             </div>
+        </div>
+    </div>
 
-            <!-- ENGLISH VERSION -->
-            <div id="content-en" class="hidden">
+    <div class="container">
+        <div class="card">
+            <!-- ENGLISH -->
+            <div id="content-en">
                 <h1>Terms of Service</h1>
-                <p class="subtitle">Last updated: December 17, 2024</p>
+                <p class="updated">Last updated: December 17, 2024</p>
 
-                <p>By using the Professor application ("App"), you agree to the following terms.</p>
+                <p>By using Professor ("App"), you agree to these terms.</p>
 
                 <h2>1. Service Description</h2>
                 <p>Professor is an AI-powered question solving application. The app analyzes math, physics, and
-                    chemistry questions submitted via photo and provides step-by-step solution suggestions.</p>
+                    chemistry questions submitted via photo and provides step-by-step solutions.</p>
 
                 <h2>2. Usage Conditions</h2>
                 <ul>
                     <li>You may only use the app for legal purposes</li>
-                    <li>You may not submit content that violates others' intellectual property rights</li>
+                    <li>You may not submit content that violates intellectual property rights</li>
                     <li>You may not misuse the app (spam, harmful content, etc.)</li>
                     <li>You are responsible for the security of your account</li>
                 </ul>
@@ -216,58 +190,112 @@
                 <h2>3. Credit System</h2>
                 <ul>
                     <li>Each question solution costs 1 credit</li>
-                    <li>Every registered user receives 2 free credits</li>
+                    <li>New users receive 2 free credits upon registration</li>
                     <li>Additional credits can be purchased in-app</li>
                     <li>Purchased credits are non-refundable</li>
                 </ul>
 
-                <h2>4. Payment and Refunds</h2>
+                <h2>4. Payments</h2>
                 <ul>
                     <li>All payments are processed through Google Play or Apple App Store</li>
-                    <li>Prices may vary depending on your country</li>
-                    <li>Refund requests are subject to the respective store's policies</li>
+                    <li>Prices may vary by country</li>
+                    <li>Refund requests are subject to the store's policies</li>
                 </ul>
 
-                <div class="warning">
+                <div class="warning-box">
                     <h2>⚠️ Disclaimer</h2>
                     <ul>
                         <li>Solutions are for <strong>educational purposes only</strong></li>
-                        <li>Should not be used directly in exams or official assessments</li>
-                        <li>100% accuracy of solutions is not guaranteed</li>
-                        <li>AI may make mistakes, verification of results is recommended</li>
+                        <li>Should not be used directly in exams</li>
+                        <li>100% accuracy is not guaranteed</li>
+                        <li>AI may make mistakes - verify results</li>
                     </ul>
                 </div>
 
                 <h2>5. Intellectual Property</h2>
-                <p>The Professor application, its logo and content are protected by copyright. Unauthorized copying,
-                    distribution or modification is prohibited.</p>
+                <p>The Professor app, logo and content are protected by copyright.</p>
 
                 <h2>6. Account Termination</h2>
                 <ul>
                     <li>You can delete your account at any time</li>
-                    <li>Accounts violating terms of service may be suspended</li>
-                    <li>Unused credits are not refunded when account is deleted</li>
+                    <li>Accounts violating terms may be suspended</li>
+                    <li>Unused credits are not refunded upon deletion</li>
                 </ul>
 
                 <h2>7. Changes</h2>
-                <p>These terms of service may be updated without prior notice. By continuing to use the app, you accept
-                    the current terms.</p>
+                <p>These terms may be updated. Continued use means acceptance of current terms.</p>
 
-                <div class="nav-links">
-                    <a href="privacy.html">Privacy Policy</a>
+                <a href="index.html" class="back-link">← Back to home</a>
+            </div>
+
+            <!-- TURKISH -->
+            <div id="content-tr" class="hidden">
+                <h1>Kullanım Şartları</h1>
+                <p class="updated">Son güncelleme: 17 Aralık 2024</p>
+
+                <p>Professor ("Uygulama") kullanarak bu şartları kabul etmiş olursunuz.</p>
+
+                <h2>1. Hizmet Tanımı</h2>
+                <p>Professor, yapay zeka destekli bir soru çözüm uygulamasıdır. Fotoğraf yoluyla gönderilen matematik,
+                    fizik ve kimya sorularını analiz eder ve adım adım çözüm sunar.</p>
+
+                <h2>2. Kullanım Koşulları</h2>
+                <ul>
+                    <li>Uygulamayı yalnızca yasal amaçlarla kullanabilirsiniz</li>
+                    <li>Fikri mülkiyet haklarını ihlal eden içerik gönderemezsiniz</li>
+                    <li>Uygulamayı kötüye kullanamazsınız (spam, zararlı içerik vb.)</li>
+                    <li>Hesabınızın güvenliğinden siz sorumlusunuz</li>
+                </ul>
+
+                <h2>3. Kredi Sistemi</h2>
+                <ul>
+                    <li>Her soru çözümü 1 kredi harcar</li>
+                    <li>Kayıt olan kullanıcılar 2 ücretsiz kredi kazanır</li>
+                    <li>Ek krediler uygulama içinden satın alınabilir</li>
+                    <li>Satın alınan krediler iade edilmez</li>
+                </ul>
+
+                <h2>4. Ödemeler</h2>
+                <ul>
+                    <li>Tüm ödemeler Google Play veya Apple App Store üzerinden işlenir</li>
+                    <li>Fiyatlar ülkeye göre değişebilir</li>
+                    <li>İade talepleri ilgili mağazanın politikalarına tabidir</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h2>⚠️ Sorumluluk Reddi</h2>
+                    <ul>
+                        <li>Çözümler yalnızca <strong>eğitim amaçlıdır</strong></li>
+                        <li>Sınavlarda doğrudan kullanılmamalıdır</li>
+                        <li>%100 doğruluk garanti edilmez</li>
+                        <li>Yapay zeka hata yapabilir - sonuçları doğrulayın</li>
+                    </ul>
                 </div>
+
+                <h2>5. Fikri Mülkiyet</h2>
+                <p>Professor uygulaması, logosu ve içerikleri telif hakkı ile korunmaktadır.</p>
+
+                <h2>6. Hesap Sonlandırma</h2>
+                <ul>
+                    <li>Hesabınızı istediğiniz zaman silebilirsiniz</li>
+                    <li>Şartları ihlal eden hesaplar askıya alınabilir</li>
+                    <li>Hesap silindiğinde kullanılmamış krediler iade edilmez</li>
+                </ul>
+
+                <h2>7. Değişiklikler</h2>
+                <p>Bu şartlar güncellenebilir. Uygulamayı kullanmaya devam ederek güncel şartları kabul etmiş
+                    sayılırsınız.</p>
+
+                <a href="index.html" class="back-link">← Ana sayfaya dön</a>
             </div>
         </div>
     </div>
 
     <script>
         function showLang(lang) {
-            document.getElementById('content-tr').classList.toggle('hidden', lang !== 'tr');
             document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
-
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
+            document.getElementById('content-tr').classList.toggle('hidden', lang !== 'tr');
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
         }
     </script>
